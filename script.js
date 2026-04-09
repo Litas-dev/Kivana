@@ -126,6 +126,7 @@ const translations = {
   en: {
     "lang.label": "Language",
     "nav.open": "Open menu",
+    "nav.how": "How it works",
     "nav.features": "Features",
     "nav.ai": "AI Assistant",
     "nav.pricing": "Pricing",
@@ -157,9 +158,40 @@ const translations = {
       "Prepared. Select a year to export a month‑by‑month summary.",
     "hero.ai.placeholder": "Type a command…",
     "hero.note": "Illustration preview of key workflows.",
+    "how.title": "How it works",
+    "how.subtitle": "Install, import, and get clear reporting in minutes.",
+    "how.step1.title": "Download & install",
+    "how.step1.desc": "macOS (.dmg) and Windows (.msi). No account required.",
+    "how.step2.title": "Import your bank CSV",
+    "how.step2.desc": "Sort and filter transactions, then review categories.",
+    "how.step3.title": "Report & export",
+    "how.step3.desc":
+      "Drill into any month and export summaries for tax or your accountant.",
+    "why.li1.title": "Local-first",
+    "why.li1.desc": "Your data stays on your device by default.",
+    "why.li2.title": "Accountant-ready",
+    "why.li2.desc": "Exports, attachments, and tax-year reporting.",
+    "why.li3.title": "Optional AI",
+    "why.li3.desc": "Use local AI with Ollama or plug in an API key.",
     "features.title": "Built for real accounting workflows",
     "features.subtitle":
       "Keep your records clean, your documents organized, and your exports ready.",
+    "example.title": "Example output",
+    "example.subtitle": "A typical month after importing your bank CSV.",
+    "example.tag": "Illustration",
+    "example.kpi1.label": "Net cash flow",
+    "example.kpi2.label": "Income",
+    "example.kpi3.label": "Expenses",
+    "example.kpi4.label": "Bills",
+    "example.box1.title": "Top categories",
+    "example.cat1": "Bills",
+    "example.cat2": "Groceries",
+    "example.cat3": "Transport",
+    "example.box2.title": "Drill-down",
+    "example.box2.desc":
+      "Click any month to filter the breakdown and the detailed list instantly.",
+    "example.box2.hint": "Month → categories → items",
+    "example.note": "Example data for illustration.",
     "features.card1.title": "Transactions + categories",
     "features.card1.desc":
       "Import, filter, and sort. Review selections and export summaries when needed.",
@@ -292,6 +324,9 @@ const translations = {
     "download.title": "Ready to try Kivana?",
     "download.subtitle":
       "Add your accounts, import transactions, and keep invoices together in one workflow.",
+    "download.fact1": "macOS (.dmg) and Windows (.msi) installers",
+    "download.fact2": "Local-first data storage (no required account)",
+    "download.fact3": "In-app updater supported for new versions",
     "download.ctaPrimary": "Download from GitHub Releases",
     "download.ctaSecondary": "Back to top",
     "download.note": "Downloads are hosted on GitHub Releases.",
@@ -314,6 +349,7 @@ const translations = {
   de: {
     "lang.label": "Sprache",
     "nav.open": "Menü öffnen",
+    "nav.how": "So funktioniert’s",
     "nav.features": "Funktionen",
     "nav.ai": "KI‑Assistent",
     "nav.pricing": "Preise",
@@ -500,6 +536,7 @@ const translations = {
   fr: {
     "lang.label": "Langue",
     "nav.open": "Ouvrir le menu",
+    "nav.how": "Comment ça marche",
     "nav.features": "Fonctionnalités",
     "nav.ai": "Assistant IA",
     "nav.pricing": "Tarifs",
@@ -681,6 +718,7 @@ const translations = {
   es: {
     "lang.label": "Idioma",
     "nav.open": "Abrir menú",
+    "nav.how": "Cómo funciona",
     "nav.features": "Funciones",
     "nav.ai": "Asistente IA",
     "nav.pricing": "Precios",
@@ -858,6 +896,7 @@ const translations = {
   it: {
     "lang.label": "Lingua",
     "nav.open": "Apri menu",
+    "nav.how": "Come funziona",
     "nav.features": "Funzionalità",
     "nav.ai": "Assistente IA",
     "nav.pricing": "Prezzi",
@@ -1033,6 +1072,7 @@ const translations = {
   pt: {
     "lang.label": "Idioma",
     "nav.open": "Abrir menu",
+    "nav.how": "Como funciona",
     "nav.features": "Recursos",
     "nav.ai": "Assistente de IA",
     "nav.pricing": "Preços",
@@ -1206,6 +1246,7 @@ const translations = {
   nl: {
     "lang.label": "Taal",
     "nav.open": "Menu openen",
+    "nav.how": "Hoe het werkt",
     "nav.features": "Functies",
     "nav.ai": "AI‑assistent",
     "nav.pricing": "Prijzen",
@@ -1380,6 +1421,7 @@ const translations = {
   pl: {
     "lang.label": "Język",
     "nav.open": "Otwórz menu",
+    "nav.how": "Jak to działa",
     "nav.features": "Funkcje",
     "nav.ai": "Asystent AI",
     "nav.pricing": "Cennik",
@@ -1557,6 +1599,7 @@ const translations = {
   nb: {
     "lang.label": "Språk",
     "nav.open": "Åpne meny",
+    "nav.how": "Slik fungerer det",
     "nav.features": "Funksjoner",
     "nav.ai": "AI-assistent",
     "nav.pricing": "Priser",
@@ -1588,9 +1631,40 @@ const translations = {
       "Klar. Velg et år for å eksportere en måned‑for‑måned‑oversikt.",
     "hero.ai.placeholder": "Skriv en kommando…",
     "hero.note": "Illustrasjon av nøkkelarbeidsflyter.",
+    "how.title": "Slik fungerer det",
+    "how.subtitle": "Installer, importer og få tydelige rapporter på minutter.",
+    "how.step1.title": "Last ned og installer",
+    "how.step1.desc": "macOS (.dmg) og Windows (.msi). Ingen konto kreves.",
+    "how.step2.title": "Importer bank‑CSV",
+    "how.step2.desc": "Sorter og filtrer transaksjoner, og sjekk kategorier.",
+    "how.step3.title": "Rapporter og eksporter",
+    "how.step3.desc":
+      "Bore ned i en måned og eksporter oppsummeringer til skatt eller regnskapsfører.",
+    "why.li1.title": "Lokal‑først",
+    "why.li1.desc": "Dataene dine blir på enheten som standard.",
+    "why.li2.title": "Klar for regnskapsfører",
+    "why.li2.desc": "Eksport, vedlegg og skatteårsrapportering.",
+    "why.li3.title": "Valgfri AI",
+    "why.li3.desc": "Bruk lokal AI med Ollama eller legg til API‑nøkkel.",
     "features.title": "Bygget for ekte regnskapsarbeid",
     "features.subtitle":
       "Hold postene ryddige, dokumentene organiserte og eksportene klare.",
+    "example.title": "Eksempelresultat",
+    "example.subtitle": "En typisk måned etter CSV‑import.",
+    "example.tag": "Illustrasjon",
+    "example.kpi1.label": "Netto cash flow",
+    "example.kpi2.label": "Inntekt",
+    "example.kpi3.label": "Utgifter",
+    "example.kpi4.label": "Regninger",
+    "example.box1.title": "Toppkategorier",
+    "example.cat1": "Regninger",
+    "example.cat2": "Mat",
+    "example.cat3": "Transport",
+    "example.box2.title": "Drill‑down",
+    "example.box2.desc":
+      "Klikk på en måned for å filtrere fordeling og detaljliste med én gang.",
+    "example.box2.hint": "Måned → kategorier → poster",
+    "example.note": "Eksempeldato for illustrasjon.",
     "features.card1.title": "Transaksjoner + kategorier",
     "features.card1.desc":
       "Importer, filtrer og sorter. Kontroller utvalg og eksporter oppsummeringer ved behov.",
@@ -1711,6 +1785,9 @@ const translations = {
     "download.title": "Klar til å prøve Kivana?",
     "download.subtitle":
       "Legg til kontoer, importer transaksjoner og hold fakturaer samlet i én flyt.",
+    "download.fact1": "Installer for macOS (.dmg) og Windows (.msi)",
+    "download.fact2": "Lokal lagring (ingen konto kreves)",
+    "download.fact3": "Innebygd oppdatering for nye versjoner",
     "download.ctaPrimary": "Last ned fra GitHub Releases",
     "download.ctaSecondary": "Til toppen",
     "download.note":
@@ -1752,6 +1829,16 @@ const basePrices = {
   "pro-monthly": 49,
   "pro-annual": 539,
   lifetime: 1599,
+};
+
+const exampleAmounts = {
+  net: 1240,
+  income: 3920,
+  expenses: 2680,
+  bills: 980,
+  cat1: 420,
+  cat2: 243,
+  cat3: 86,
 };
 
 const exchangeRates = {
@@ -1831,6 +1918,14 @@ function setupLanguage() {
         (el) =>
           (el.textContent = formatPriceValue(basePrices["lifetime"], lang)),
       );
+
+    document.querySelectorAll("[data-example-price]").forEach((el) => {
+      const k = el.getAttribute("data-example-price");
+      if (!k) return;
+      const amount = exampleAmounts[k];
+      if (typeof amount !== "number") return;
+      el.textContent = formatPriceValue(amount, lang);
+    });
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");

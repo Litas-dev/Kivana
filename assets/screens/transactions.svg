@@ -1,0 +1,29 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#0F1420"/>
+    </linearGradient>
+    <linearGradient id="a" x1="260" y1="260" x2="1340" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C5CFF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" rx="48" fill="url(#bg)"/>
+  <rect x="120" y="140" width="1360" height="720" rx="38" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <rect x="160" y="190" width="1280" height="70" rx="24" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+  <rect x="200" y="212" width="220" height="26" rx="13" fill="rgba(255,255,255,0.10)"/>
+  <rect x="440" y="212" width="160" height="26" rx="13" fill="rgba(255,255,255,0.08)"/>
+  <rect x="620" y="212" width="120" height="26" rx="13" fill="rgba(255,255,255,0.06)"/>
+  <rect x="160" y="290" width="1280" height="530" rx="30" fill="url(#a)" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+  <rect x="210" y="345" width="1180" height="70" rx="20" fill="rgba(255,255,255,0.05)"/>
+  <rect x="210" y="435" width="1180" height="70" rx="20" fill="rgba(255,255,255,0.04)"/>
+  <rect x="210" y="525" width="1180" height="70" rx="20" fill="rgba(255,255,255,0.04)"/>
+  <rect x="210" y="615" width="1180" height="70" rx="20" fill="rgba(255,255,255,0.04)"/>
+  <text x="240" y="520" fill="rgba(255,255,255,0.90)" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="44" font-weight="700">
+    Transactions Screenshot
+  </text>
+  <text x="240" y="575" fill="rgba(255,255,255,0.65)" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="500">
+    Replace assets/screens/transactions.png to show your real image
+  </text>
+</svg>

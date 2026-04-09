@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kivana — Personal Finance Desktop App</title>
+    <meta
+      name="description"
+      content="Kivana is a private, fast personal finance desktop app for tracking accounts, transactions, bills, reports, and invoices. Your data stays on your device."
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body data-billing="annual">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <header class="siteHeader" data-header>
+      <div class="container headerInner">
+        <a class="brand" href="#top" aria-label="Kivana home">
+          <img
+            class="brandMark"
+            src="./assets/logo.svg"
+            alt=""
+            width="28"
+            height="28"
+          />
+          <span class="brandName">Kivana</span>
+        </a>
+
+        <div class="headerRight">
+          <div class="langWrap">
+            <label class="srOnly" for="langSelect" data-i18n="lang.label"
+              >Language</label
+            >
+            <select
+              id="langSelect"
+              class="langSelect"
+              aria-label="Language"
+              data-lang-select
+            >
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="es">Español</option>
+              <option value="it">Italiano</option>
+              <option value="pt">Português</option>
+              <option value="nl">Nederlands</option>
+              <option value="pl">Polski</option>
+            </select>
+          </div>
+
+          <button
+            class="navToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="siteNav"
+            data-nav-toggle
+          >
+            <span class="navToggleIcon" aria-hidden="true"></span>
+            <span class="srOnly" data-i18n="nav.open">Open menu</span>
+          </button>
+
+          <nav class="siteNav" id="siteNav" aria-label="Primary" data-nav>
+            <a class="navLink" href="#features" data-i18n="nav.features"
+              >Features</a
+            >
+            <a class="navLink" href="#ai" data-i18n="nav.ai">AI Assistant</a>
+            <a class="navLink" href="#pricing" data-i18n="nav.pricing"
+              >Pricing</a
+            >
+            <a class="navLink" href="#roadmap" data-i18n="nav.roadmap"
+              >Roadmap</a
+            >
+            <a class="navLink" href="#privacy" data-i18n="nav.privacy"
+              >Privacy</a
+            >
+            <a class="navLink" href="#faq" data-i18n="nav.faq">FAQ</a>
+            <a class="navCta" href="#download" data-i18n="nav.download"
+              >Download</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container heroGrid">
+          <div class="heroCopy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">
+              Personal finances, without the spreadsheets
+            </p>
+            <h1 class="heroTitle" data-i18n="hero.title">
+              AI‑assisted accounting on your desktop.
+            </h1>
+            <p class="heroSubtitle" data-i18n="hero.subtitle">
+              Kivana helps you organize transactions, bills, and documents with
+              professional reporting and optional AI assistance. Your data stays
+              on your device, with portable backups when you need them.
+            </p>
+            <div class="heroActions">
+              <a
+                class="button primary"
+                href="#download"
+                data-i18n="hero.ctaPrimary"
+                >Get Kivana</a
+              >
+              <a
+                class="button ghost"
+                href="#pricing"
+                data-i18n="hero.ctaSecondary"
+                >View plans</a
+              >
+            </div>
+
+            <dl class="heroStats" aria-label="Highlights">
+              <div class="stat">
+                <dt data-i18n="hero.stat1.title">Local-first</dt>
+                <dd data-i18n="hero.stat1.desc">Data saved on your machine</dd>
+              </div>
+              <div class="stat">
+                <dt data-i18n="hero.stat2.title">Fast</dt>
+                <dd data-i18n="hero.stat2.desc">
+                  Built for large transaction lists
+                </dd>
+              </div>
+              <div class="stat">
+                <dt data-i18n="hero.stat3.title">Portable</dt>
+                <dd data-i18n="hero.stat3.desc">
+                  Backup + restore with attachments
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="heroVisual" aria-label="Product preview">
+            <div class="window">
+              <div class="windowBar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="windowTitle">Kivana — AI Command Bar</span>
+              </div>
+              <div class="windowBody">
+                <div class="mockChart">
+                  <div class="mockBars">
+                    <span style="height: 35%"></span>
+                    <span style="height: 65%"></span>
+                    <span style="height: 42%"></span>
+                    <span style="height: 76%"></span>
+                    <span style="height: 51%"></span>
+                    <span style="height: 88%"></span>
+                    <span style="height: 61%"></span>
+                    <span style="height: 47%"></span>
+                    <span style="height: 73%"></span>
+                    <span style="height: 40%"></span>
+                    <span style="height: 67%"></span>
+                    <span style="height: 52%"></span>
+                  </div>
+                  <div class="mockLegend">
+                    <span class="pill"><i class="swatch a"></i>Income</span>
+                    <span class="pill"><i class="swatch b"></i>Expenses</span>
+                    <span class="pill"><i class="swatch c"></i>Savings</span>
+                  </div>
+                </div>
+                <div class="mockAi" aria-label="AI preview">
+                  <div class="mockAiTop">
+                    <span class="mockAiTitle" data-i18n="hero.ai.title"
+                      >AI assistant</span
+                    >
+                    <span class="mockAiTag" data-i18n="hero.ai.tag"
+                      >Local or API</span
+                    >
+                  </div>
+                  <div class="mockAiBubbles" aria-label="AI examples">
+                    <div class="bubble user" data-i18n="hero.ai.ex1.user">
+                      “Summarize last month by category and highlight
+                      anomalies.”
+                    </div>
+                    <div class="bubble ai" data-i18n="hero.ai.ex1.ai">
+                      Summary ready. Largest changes: Bills (+12%), Transport
+                      (‑8%).
+                    </div>
+                    <div class="bubble user" data-i18n="hero.ai.ex2.user">
+                      “Prepare a tax‑year report starting April.”
+                    </div>
+                    <div class="bubble ai" data-i18n="hero.ai.ex2.ai">
+                      Prepared. Select a year to export a month‑by‑month
+                      summary.
+                    </div>
+                  </div>
+                  <div class="mockCmd">
+                    <span class="cmdIcon" aria-hidden="true"></span>
+                    <span class="cmdHint" data-i18n="hero.ai.placeholder"
+                      >Type a command…</span
+                    >
+                    <span class="cmdKey">⌘K</span>
+                  </div>
+                </div>
+                <div class="mockList">
+                  <div class="row">
+                    <span class="chip">Groceries</span>
+                    <span class="muted">£243.10</span>
+                  </div>
+                  <div class="row">
+                    <span class="chip">Transport</span>
+                    <span class="muted">£86.40</span>
+                  </div>
+                  <div class="row">
+                    <span class="chip">Bills</span>
+                    <span class="muted">£420.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="heroNote" data-i18n="hero.note">
+              Illustration preview of key workflows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 data-i18n="features.title">
+              Built for real accounting workflows
+            </h2>
+            <p class="muted" data-i18n="features.subtitle">
+              Keep your records clean, your documents organized, and your
+              exports ready.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3 data-i18n="features.card1.title">
+                Transactions + categories
+              </h3>
+              <p class="muted" data-i18n="features.card1.desc">
+                Import, filter, and sort. Review selections and export summaries
+                when needed.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.card2.title">
+                AI Command Bar (optional)
+              </h3>
+              <p class="muted" data-i18n="features.card2.desc">
+                Ask for summaries, find patterns, and draft accountant-ready
+                notes.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.card3.title">Accounts, bills, income</h3>
+              <p class="muted" data-i18n="features.card3.desc">
+                Track your money sources and obligations with a clean desktop
+                workflow.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.card4.title">Reports that drill down</h3>
+              <p class="muted" data-i18n="features.card4.desc">
+                Click a month to instantly filter breakdowns and detail lists.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.card5.title">Invoices + attachments</h3>
+              <p class="muted" data-i18n="features.card5.desc">
+                Store invoices and supporting files alongside your local data.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.card6.title">Goals + debts</h3>
+              <p class="muted" data-i18n="features.card6.desc">
+                Track targets and balances so you can plan ahead with
+                confidence.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.card7.title">Backup & restore</h3>
+              <p class="muted" data-i18n="features.card7.desc">
+                Export a portable backup bundle, including your saved
+                attachments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="ai">
+        <div class="container aiGrid">
+          <div class="aiCopy">
+            <div class="sectionHead">
+              <h2 data-i18n="ai.title">AI assistance for faster bookkeeping</h2>
+              <p class="muted" data-i18n="ai.subtitle">
+                Use the AI Command Bar to search, summarize, and organize your
+                records. It’s optional and can run with local AI.
+              </p>
+            </div>
+            <div class="aiPoints">
+              <div class="aiPoint">
+                <div class="aiKicker" data-i18n="ai.point1.title">
+                  Local-first AI
+                </div>
+                <div class="muted" data-i18n="ai.point1.desc">
+                  Run locally with Ollama, or use an external API key if you
+                  prefer.
+                </div>
+              </div>
+              <div class="aiPoint">
+                <div class="aiKicker" data-i18n="ai.point2.title">
+                  Professional summaries
+                </div>
+                <div class="muted" data-i18n="ai.point2.desc">
+                  Generate monthly summaries, category breakdowns, and variance
+                  explanations.
+                </div>
+              </div>
+              <div class="aiPoint">
+                <div class="aiKicker" data-i18n="ai.point3.title">
+                  Accountant-ready exports
+                </div>
+                <div class="muted" data-i18n="ai.point3.desc">
+                  Draft clear notes and supporting summaries for year-end or tax
+                  reporting.
+                </div>
+              </div>
+            </div>
+            <div class="aiActions">
+              <a
+                class="button ghost"
+                href="#pricing"
+                data-i18n="ai.ctaSecondary"
+                >See plans</a
+              >
+              <a
+                class="button primary"
+                href="#download"
+                data-i18n="ai.ctaPrimary"
+                >Try it</a
+              >
+            </div>
+          </div>
+
+          <div class="aiDemo" aria-label="AI assistant demo">
+            <div class="demoCard">
+              <div class="demoHeader">
+                <span class="demoTitle" data-i18n="ai.demo.title"
+                  >AI Command Bar</span
+                >
+                <span class="demoPill">Pro</span>
+              </div>
+              <div class="demoBody">
+                <div class="demoCmd">
+                  <span class="cmdIcon" aria-hidden="true"></span>
+                  <span class="demoCmdText" data-i18n="ai.demo.prompt"
+                    >“Identify subscriptions and produce a monthly total.”</span
+                  >
+                  <span class="cmdKey">Enter</span>
+                </div>
+                <div class="demoResult">
+                  <div class="demoLine">
+                    <span class="demoDot a"></span>
+                    <span class="demoLabel" data-i18n="ai.demo.line1"
+                      >Subscriptions found</span
+                    >
+                    <span class="demoValue">12</span>
+                  </div>
+                  <div class="demoLine">
+                    <span class="demoDot b"></span>
+                    <span class="demoLabel" data-i18n="ai.demo.line2"
+                      >Monthly total</span
+                    >
+                    <span class="demoValue">£78.30</span>
+                  </div>
+                  <div class="demoLine">
+                    <span class="demoDot c"></span>
+                    <span class="demoLabel" data-i18n="ai.demo.line3"
+                      >Most expensive</span
+                    >
+                    <span class="demoValue">£19.99</span>
+                  </div>
+                </div>
+                <div class="demoChips" aria-label="Example prompts">
+                  <span class="demoChip" data-i18n="ai.demo.chip1"
+                    >“Explain cash flow variance”</span
+                  >
+                  <span class="demoChip" data-i18n="ai.demo.chip2"
+                    >“Prepare a tax‑year summary”</span
+                  >
+                  <span class="demoChip" data-i18n="ai.demo.chip3"
+                    >“Flag unusual expenses”</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="demoFoot muted" data-i18n="ai.demo.note">
+              Standard includes basic AI. Pro adds advanced controls for
+              accountant workflows.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 data-i18n="pricing.title">Plans</h2>
+            <p class="muted" data-i18n="pricing.subtitle">
+              Choose a plan that matches your workflow — from personal to
+              professional.
+            </p>
+          </div>
+
+          <div class="priceToggle" role="group" aria-label="Billing period">
+            <button
+              type="button"
+              class="toggleBtn isActive"
+              data-billing-toggle="annual"
+              aria-pressed="true"
+            >
+              <span data-i18n="pricing.toggle.annual">Annual</span>
+              <span class="toggleHint" data-i18n="pricing.toggle.save"
+                >(1 month free)</span
+              >
+            </button>
+            <button
+              type="button"
+              class="toggleBtn"
+              data-billing-toggle="monthly"
+              aria-pressed="false"
+              data-i18n="pricing.toggle.monthly"
+            >
+              Monthly
+            </button>
+          </div>
+
+          <div class="pricingGrid">
+            <article class="priceCard">
+              <div class="priceTop">
+                <h3 class="priceName" data-i18n="pricing.basic.name">Basic</h3>
+                <p class="priceValue" data-price-basic>£0</p>
+                <p class="priceHint muted" data-i18n="pricing.basic.hint">
+                  Basic tools to keep things organized.
+                </p>
+              </div>
+              <ul class="priceList">
+                <li data-i18n="pricing.basic.li1">Basic bill handling</li>
+                <li data-i18n="pricing.basic.li2">
+                  Store invoices + bank statements
+                </li>
+                <li data-i18n="pricing.basic.li3">
+                  Export a clean package for your accountant
+                </li>
+                <li data-i18n="pricing.basic.li4">Local storage</li>
+              </ul>
+              <a
+                class="button ghost priceBtn"
+                href="#download"
+                data-i18n="pricing.basic.cta"
+                >Get Basic</a
+              >
+            </article>
+
+            <article class="priceCard featured" aria-label="Standard plan">
+              <div class="priceTop">
+                <div class="priceBadge" data-i18n="pricing.badge.popular">
+                  Most popular
+                </div>
+                <h3 class="priceName" data-i18n="pricing.standard.name">
+                  Standard
+                </h3>
+                <p class="priceValue priceAnnual">
+                  <span class="priceCurrency" data-price-standard-annual
+                    >£165</span
+                  ><span class="priceUnit" data-i18n="pricing.unit.yr"
+                    >/yr</span
+                  >
+                </p>
+                <p class="priceValue priceMonthly">
+                  <span class="priceCurrency" data-price-standard-monthly
+                    >£15</span
+                  ><span class="priceUnit" data-i18n="pricing.unit.mo"
+                    >/mo</span
+                  >
+                </p>
+                <p
+                  class="priceMeta muted priceAnnual"
+                  data-i18n="pricing.standard.metaAnnual"
+                >
+                  Save 1 month with annual billing.
+                </p>
+                <p
+                  class="priceMeta muted priceMonthly"
+                  data-i18n="pricing.standard.metaMonthly"
+                >
+                  £165 / year (1 month free).
+                </p>
+                <p class="priceHint muted" data-i18n="pricing.standard.hint">
+                  More features with basic AI support.
+                </p>
+              </div>
+              <ul class="priceList">
+                <li data-i18n="pricing.standard.li1">Everything in Basic</li>
+                <li data-i18n="pricing.standard.li2">
+                  Advanced filters + sorting
+                </li>
+                <li data-i18n="pricing.standard.li3">Goals + debts</li>
+                <li data-i18n="pricing.standard.li4">
+                  Backup + restore bundle
+                </li>
+                <li data-i18n="pricing.standard.li5">
+                  Expanded reporting tools
+                </li>
+                <li data-i18n="pricing.standard.li6">AI assistant (basic)</li>
+              </ul>
+              <a
+                class="button primary priceBtn"
+                href="#download"
+                data-i18n="pricing.standard.cta"
+                >Get Standard</a
+              >
+            </article>
+
+            <article class="priceCard pro">
+              <div class="priceTop">
+                <h3 class="priceName" data-i18n="pricing.pro.name">Pro</h3>
+                <p class="priceValue priceAnnual">
+                  <span class="priceCurrency" data-price-pro-annual>£539</span
+                  ><span class="priceUnit" data-i18n="pricing.unit.yr"
+                    >/yr</span
+                  >
+                </p>
+                <p class="priceValue priceMonthly">
+                  <span class="priceCurrency" data-price-pro-monthly>£49</span
+                  ><span class="priceUnit" data-i18n="pricing.unit.mo"
+                    >/mo</span
+                  >
+                </p>
+                <p
+                  class="priceMeta muted priceAnnual"
+                  data-i18n="pricing.pro.metaAnnual"
+                >
+                  Save 1 month with annual billing.
+                </p>
+                <p
+                  class="priceMeta muted priceMonthly"
+                  data-i18n="pricing.pro.metaMonthly"
+                >
+                  £539 / year (1 month free).
+                </p>
+                <p class="priceHint muted" data-i18n="pricing.pro.hint">
+                  For accountants and advanced tax workflows.
+                </p>
+              </div>
+              <ul class="priceList">
+                <li data-i18n="pricing.pro.li1">Everything in Standard</li>
+                <li data-i18n="pricing.pro.li2">
+                  Invoice attachments workflow
+                </li>
+                <li data-i18n="pricing.pro.li3">
+                  AI-assisted categorization + summaries
+                </li>
+                <li data-i18n="pricing.pro.li4">
+                  Client-ready export packs and reporting
+                </li>
+                <li data-i18n="pricing.pro.li5">Tax-year reporting support</li>
+                <li data-i18n="pricing.pro.li6">Priority support</li>
+              </ul>
+              <a
+                class="button ghost priceBtn"
+                href="#download"
+                data-i18n="pricing.pro.cta"
+                >Get Pro</a
+              >
+            </article>
+          </div>
+
+          <div
+            class="lifetimeCallout"
+            role="note"
+            aria-label="Lifetime license"
+          >
+            <div class="lifetimeTop">
+              <div class="lifetimeTitle" data-i18n="pricing.lifetime.title">
+                Lifetime license (Pro)
+              </div>
+              <div class="lifetimePrice">
+                <span data-price-lifetime>£1,599</span>
+                <span data-i18n="pricing.lifetime.unit">one‑time</span>
+              </div>
+            </div>
+            <div class="muted" data-i18n="pricing.lifetime.desc">
+              For firms that prefer a one‑time purchase instead of subscription
+              billing.
+            </div>
+          </div>
+
+          <p class="muted tiny" data-i18n="pricing.note">
+            Prices are placeholders. Change them any time.
+          </p>
+        </div>
+      </section>
+
+      <section class="section alt" id="roadmap">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 data-i18n="roadmap.title">Availability & roadmap</h2>
+            <p class="muted" data-i18n="roadmap.subtitle">
+              Desktop first. Mobile is planned.
+            </p>
+          </div>
+
+          <div class="roadmapTree" aria-label="Roadmap">
+            <article class="roadNode live">
+              <div class="roadNodeHead">
+                <span class="roadDot" aria-hidden="true"></span>
+                <div class="roadNodeTitle">
+                  <h3 data-i18n="roadmap.desktop.title">Desktop</h3>
+                  <span class="status live" data-i18n="roadmap.desktop.status"
+                    >Released</span
+                  >
+                </div>
+              </div>
+              <div class="roadLeaves" aria-label="Desktop targets">
+                <span class="leaf" data-i18n="roadmap.desktop.leaf1"
+                  >macOS</span
+                >
+                <span class="leaf" data-i18n="roadmap.desktop.leaf2"
+                  >Windows</span
+                >
+              </div>
+              <div class="muted tiny" data-i18n="roadmap.desktop.note">
+                Download links coming soon.
+              </div>
+            </article>
+
+            <article class="roadNode todo">
+              <div class="roadNodeHead">
+                <span class="roadDot" aria-hidden="true"></span>
+                <div class="roadNodeTitle">
+                  <h3 data-i18n="roadmap.mobile.title">Mobile</h3>
+                  <span class="status todo" data-i18n="roadmap.mobile.status"
+                    >On the roadmap</span
+                  >
+                </div>
+              </div>
+              <div class="roadLeaves" aria-label="Mobile targets">
+                <span class="leaf" data-i18n="roadmap.mobile.leaf1"
+                  >Android</span
+                >
+                <span class="leaf" data-i18n="roadmap.mobile.leaf2">iOS</span>
+              </div>
+            </article>
+
+            <article class="roadNode plan">
+              <div class="roadNodeHead">
+                <span class="roadDot" aria-hidden="true"></span>
+                <div class="roadNodeTitle">
+                  <h3 data-i18n="roadmap.next.title">Next</h3>
+                  <span class="status plan" data-i18n="roadmap.next.status"
+                    >Planned</span
+                  >
+                </div>
+              </div>
+              <div class="roadLeaves" aria-label="Planned work">
+                <span class="leaf" data-i18n="roadmap.next.leaf1"
+                  >AI accounting actions</span
+                >
+                <span class="leaf" data-i18n="roadmap.next.leaf2"
+                  >Client export packs (Pro)</span
+                >
+                <span class="leaf" data-i18n="roadmap.next.leaf3"
+                  >Document organization</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="privacy">
+        <div class="container privacyGrid">
+          <div class="privacyCopy">
+            <h2 data-i18n="privacy.title">Private by design</h2>
+            <p class="muted">
+              <span data-i18n="privacy.subtitle">
+                Your financial data is stored locally on your device. You
+                control backups, exports, and what you share.
+              </span>
+            </p>
+            <ul class="bullets">
+              <li data-i18n="privacy.li1">
+                No automatic upload of your finance data
+              </li>
+              <li data-i18n="privacy.li2">
+                Local attachments folder for bills and invoices
+              </li>
+              <li data-i18n="privacy.li3">
+                Portable backups for accountants or migration
+              </li>
+            </ul>
+            <div class="inlineActions">
+              <button
+                type="button"
+                class="button ghost"
+                data-open-modal="privacy"
+                data-i18n="privacy.open"
+              >
+                Read full privacy policy
+              </button>
+            </div>
+          </div>
+          <div class="privacyCallout">
+            <h3 data-i18n="privacy.callout.title">Works offline</h3>
+            <p class="muted" data-i18n="privacy.callout.desc">
+              Use it on a laptop without worrying about sync, accounts, or
+              downtime.
+            </p>
+            <div class="calloutRow">
+              <span class="tag" data-i18n="privacy.tag1">Local JSON</span>
+              <span class="tag" data-i18n="privacy.tag2">Attachments</span>
+              <span class="tag" data-i18n="privacy.tag3">Backup bundle</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="faq">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 data-i18n="faq.title">FAQ</h2>
+            <p class="muted" data-i18n="faq.subtitle">
+              Quick answers to common questions.
+            </p>
+          </div>
+
+          <div class="faqQuick">
+            <div class="faqPills">
+              <span class="pill"
+                ><i class="swatch a"></i
+                ><span data-i18n="faq.pill1">Local-first</span></span
+              >
+              <span class="pill"
+                ><i class="swatch b"></i
+                ><span data-i18n="faq.pill2">AI optional</span></span
+              >
+              <span class="pill"
+                ><i class="swatch c"></i
+                ><span data-i18n="faq.pill3">Export-ready</span></span
+              >
+            </div>
+            <div class="inlineActions">
+              <button
+                type="button"
+                class="button primary"
+                data-open-modal="faq"
+                data-i18n="faq.open"
+              >
+                Open FAQ
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="download">
+        <div class="container">
+          <div class="cta">
+            <div class="ctaCopy">
+              <h2 data-i18n="download.title">Ready to try Kivana?</h2>
+              <p class="muted" data-i18n="download.subtitle">
+                Add your accounts, import transactions, and keep invoices
+                together in one workflow.
+              </p>
+            </div>
+            <div class="ctaActions">
+              <a
+                class="button primary"
+                href="#"
+                aria-disabled="true"
+                data-disabled-link
+                data-i18n="download.ctaPrimary"
+                >Download (coming soon)</a
+              >
+              <a
+                class="button ghost"
+                href="#top"
+                data-i18n="download.ctaSecondary"
+                >Back to top</a
+              >
+            </div>
+          </div>
+          <p class="muted tiny">
+            <span data-i18n="download.note"
+              >Replace “coming soon” with your real download links when you’re
+              ready.</span
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="modalBackdrop"
+      hidden
+      data-modal="privacy"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacyTitle"
+    >
+      <div class="modal">
+        <div class="modalTop">
+          <div
+            class="modalTitle"
+            id="privacyTitle"
+            data-i18n="privacy.modalTitle"
+          >
+            Privacy Policy (EU)
+          </div>
+          <button
+            type="button"
+            class="modalClose"
+            data-close-modal
+            data-i18n="modal.close"
+          >
+            Close
+          </button>
+        </div>
+        <div class="modalBody">
+          <p class="muted" data-i18n="privacy.modalNote">
+            This policy is provided for transparency and is not legal advice.
+          </p>
+
+          <h3>1. Controller</h3>
+          <p class="muted">
+            Data controller: Kivana developer. Contact:
+            <span class="mono">privacy@kivana.app</span> (replace before
+            publishing).
+          </p>
+
+          <h3>2. Scope</h3>
+          <p class="muted">
+            This policy covers the Kivana marketing website and the Kivana
+            desktop application. The desktop app is local‑first and stores data
+            on your device.
+          </p>
+
+          <h3>3. Legal framework</h3>
+          <p class="muted">
+            We aim to follow the GDPR (Regulation (EU) 2016/679) transparency
+            requirements and the EU ePrivacy rules for cookies/local storage.
+          </p>
+
+          <h3>4. Website data we process</h3>
+          <ul class="bullets">
+            <li>
+              <span class="mono">Server logs</span> (IP address, user agent,
+              timestamps) processed by the hosting provider to deliver the
+              website and protect it.
+            </li>
+            <li>
+              <span class="mono">Local storage</span> for language preference
+              and pricing view (functional, no tracking).
+            </li>
+          </ul>
+          <p class="muted">
+            We do not intentionally run analytics or advertising trackers on
+            this website.
+          </p>
+
+          <h3>5. App data we process</h3>
+          <ul class="bullets">
+            <li>
+              Your financial records and attachments are stored locally on your
+              device by default.
+            </li>
+            <li>
+              If you choose to use external AI providers, relevant text you
+              submit may be sent to that provider as part of the request.
+            </li>
+          </ul>
+
+          <h3>6. Purposes and legal bases (GDPR)</h3>
+          <ul class="bullets">
+            <li>
+              Website delivery and security: legitimate interests (Art.
+              6(1)(f)).
+            </li>
+            <li>
+              Functional preferences (language/billing view): legitimate
+              interests or your request (Art. 6(1)(f) / Art. 6(1)(b)).
+            </li>
+            <li>
+              Support communications (if you contact us): legitimate interests /
+              contract (Art. 6(1)(f) / Art. 6(1)(b)).
+            </li>
+          </ul>
+
+          <h3>7. Data retention</h3>
+          <ul class="bullets">
+            <li>
+              Website logs: retained by the hosting provider for a limited
+              period for security/operations.
+            </li>
+            <li>App data: stays on your device unless you export/share it.</li>
+          </ul>
+
+          <h3>8. Sharing and international transfers</h3>
+          <ul class="bullets">
+            <li>
+              Website hosting provider may process basic connection data to
+              serve the site.
+            </li>
+            <li>
+              If you use external AI providers, processing may occur outside the
+              EEA depending on the provider and your configuration.
+            </li>
+          </ul>
+
+          <h3>9. Your rights (EEA/UK)</h3>
+          <p class="muted">
+            Depending on your location and circumstances, you may have rights to
+            access, rectification, erasure, restriction, portability, objection,
+            and to lodge a complaint with your supervisory authority.
+          </p>
+
+          <h3>10. Security</h3>
+          <p class="muted">
+            We take reasonable measures to protect the website and recommend
+            protecting your device and backups because the app stores data
+            locally.
+          </p>
+
+          <h3>11. Changes</h3>
+          <p class="muted">
+            We may update this policy. Update the effective date when publishing
+            changes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modalBackdrop"
+      hidden
+      data-modal="faq"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="faqTitle"
+    >
+      <div class="modal">
+        <div class="modalTop">
+          <div class="modalTitle" id="faqTitle" data-i18n="faq.modalTitle">
+            FAQ
+          </div>
+          <button
+            type="button"
+            class="modalClose"
+            data-close-modal
+            data-i18n="modal.close"
+          >
+            Close
+          </button>
+        </div>
+        <div class="modalBody">
+          <div class="faq">
+            <details class="faqItem" open>
+              <summary>Is Kivana a web app or a desktop app?</summary>
+              <p class="muted">
+                Kivana is a desktop app. This website is only marketing and
+                documentation.
+              </p>
+            </details>
+            <details class="faqItem">
+              <summary>Where is my data stored?</summary>
+              <p class="muted">
+                By default, your data is stored locally on your device.
+              </p>
+            </details>
+            <details class="faqItem">
+              <summary>Is the AI assistant required?</summary>
+              <p class="muted">
+                No. AI is optional. You can use local AI (Ollama) or disable AI
+                entirely.
+              </p>
+            </details>
+            <details class="faqItem">
+              <summary>
+                What’s the difference between Basic, Standard and Pro?
+              </summary>
+              <p class="muted">
+                Basic is for organizing records and exporting to an accountant.
+                Standard adds more tools plus basic AI. Pro is designed for
+                accountant workflows, client packs, and advanced AI.
+              </p>
+            </details>
+            <details class="faqItem">
+              <summary>Can I attach invoices and bank statements?</summary>
+              <p class="muted">
+                Yes. Kivana can store attachments locally alongside your
+                records.
+              </p>
+            </details>
+            <details class="faqItem">
+              <summary>Can I export for tax year periods?</summary>
+              <p class="muted">
+                Yes. The reporting workflow supports tax-year style reporting
+                and export-ready summaries.
+              </p>
+            </details>
+            <details class="faqItem">
+              <summary>Do you track me on the website?</summary>
+              <p class="muted">
+                We do not intentionally run analytics or advertising trackers.
+                Hosting providers may still log basic connection data.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="siteFooter">
+      <div class="container footerInner">
+        <div class="footerBrand">
+          <img src="./assets/logo.svg" alt="" width="22" height="22" />
+          <span>Kivana</span>
+        </div>
+        <div class="footerLinks" aria-label="Footer">
+          <a href="#features" data-i18n="footer.features">Features</a>
+          <a href="#privacy" data-i18n="footer.privacy">Privacy</a>
+          <a href="#faq" data-i18n="footer.faq">FAQ</a>
+        </div>
+        <p class="muted tiny">
+          <span data-i18n="footer.copyrightPrefix">©</span>
+          <span data-year></span> Kivana.
+          <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -71,6 +71,12 @@
             <a class="navLink" href="#pricing" data-i18n="nav.pricing"
               >Pricing</a
             >
+            <a
+              class="navLink"
+              href="#accountants"
+              data-i18n="nav.accountants"
+              >Accountants</a
+            >
             <a class="navLink" href="#roadmap" data-i18n="nav.roadmap"
               >Roadmap</a
             >
@@ -757,6 +763,116 @@
         </div>
       </section>
 
+      <section class="section" id="accountants">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 data-i18n="accountants.title">Rent an accountant</h2>
+            <p class="muted" data-i18n="accountants.subtitle">
+              Choose what you need done, and request an introduction.
+            </p>
+          </div>
+
+          <div class="accountantGrid" aria-label="Accountant services">
+            <article class="acctCard">
+              <div class="acctTop">
+                <h3 class="acctTitle" data-i18n="accountants.card1.title">
+                  Bookkeeping & VAT
+                </h3>
+                <div class="acctBadge" data-i18n="accountants.badge.remote">
+                  Remote
+                </div>
+              </div>
+              <ul class="acctList">
+                <li data-i18n="accountants.card1.li1">
+                  Categorization review and clean-up
+                </li>
+                <li data-i18n="accountants.card1.li2">
+                  VAT-ready exports and supporting notes
+                </li>
+                <li data-i18n="accountants.card1.li3">
+                  Attachments organized (invoices/statements)
+                </li>
+              </ul>
+              <button
+                class="button primary acctBtn"
+                type="button"
+                data-open-modal="accountant"
+                data-accountant-pick="Bookkeeping & VAT"
+                data-i18n="accountants.request"
+              >
+                Request an introduction
+              </button>
+            </article>
+
+            <article class="acctCard">
+              <div class="acctTop">
+                <h3 class="acctTitle" data-i18n="accountants.card2.title">
+                  Self‑employed & tax year
+                </h3>
+                <div class="acctBadge" data-i18n="accountants.badge.remote">
+                  Remote
+                </div>
+              </div>
+              <ul class="acctList">
+                <li data-i18n="accountants.card2.li1">
+                  Month-by-month summary for your tax year
+                </li>
+                <li data-i18n="accountants.card2.li2">
+                  Expense breakdown and anomaly checks
+                </li>
+                <li data-i18n="accountants.card2.li3">
+                  Export pack for filing or your adviser
+                </li>
+              </ul>
+              <button
+                class="button primary acctBtn"
+                type="button"
+                data-open-modal="accountant"
+                data-accountant-pick="Self‑employed & tax year"
+                data-i18n="accountants.request"
+              >
+                Request an introduction
+              </button>
+            </article>
+
+            <article class="acctCard">
+              <div class="acctTop">
+                <h3 class="acctTitle" data-i18n="accountants.card3.title">
+                  Small business support
+                </h3>
+                <div class="acctBadge" data-i18n="accountants.badge.remote">
+                  Remote
+                </div>
+              </div>
+              <ul class="acctList">
+                <li data-i18n="accountants.card3.li1">
+                  Ongoing bookkeeping and reconciliation
+                </li>
+                <li data-i18n="accountants.card3.li2">
+                  Document handling and invoice organization
+                </li>
+                <li data-i18n="accountants.card3.li3">
+                  Regular reporting and export support
+                </li>
+              </ul>
+              <button
+                class="button primary acctBtn"
+                type="button"
+                data-open-modal="accountant"
+                data-accountant-pick="Small business support"
+                data-i18n="accountants.request"
+              >
+                Request an introduction
+              </button>
+            </article>
+          </div>
+
+          <p class="muted tiny" data-i18n="accountants.note">
+            This is a request form. Availability depends on region and capacity.
+          </p>
+        </div>
+      </section>
+
       <section class="section alt" id="roadmap">
         <div class="container">
           <div class="sectionHead">
@@ -965,6 +1081,97 @@
         </div>
       </section>
     </main>
+
+    <div
+      class="modalBackdrop"
+      hidden
+      data-modal="accountant"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="accountantTitle"
+    >
+      <div class="modal">
+        <div class="modalTop">
+          <div
+            class="modalTitle"
+            id="accountantTitle"
+            data-i18n="accountants.modalTitle"
+          >
+            Request an accountant
+          </div>
+          <button
+            type="button"
+            class="modalClose"
+            data-close-modal
+            data-i18n="modal.close"
+          >
+            Close
+          </button>
+        </div>
+        <div class="modalBody">
+          <form class="acctForm" data-accountant-form>
+            <input type="hidden" name="service" value="" data-accountant-service />
+
+            <div class="formGrid">
+              <label class="formField">
+                <span class="formLabel" data-i18n="accountants.form.region"
+                  >Region</span
+                >
+                <select class="formInput" name="region" required>
+                  <option value="UK">UK</option>
+                  <option value="Norway">Norway</option>
+                  <option value="EU">EU</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+
+              <label class="formField">
+                <span class="formLabel" data-i18n="accountants.form.type"
+                  >Business type</span
+                >
+                <select class="formInput" name="type" required>
+                  <option value="Personal">Personal</option>
+                  <option value="Self-employed">Self-employed</option>
+                  <option value="Company">Company</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="formField">
+              <span class="formLabel" data-i18n="accountants.form.email"
+                >Your email</span
+              >
+              <input
+                class="formInput"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </label>
+
+            <label class="formField">
+              <span class="formLabel" data-i18n="accountants.form.notes"
+                >What do you need help with?</span
+              >
+              <textarea class="formInput formText" name="notes" rows="5"></textarea>
+            </label>
+
+            <button
+              class="button primary"
+              type="submit"
+              data-i18n="accountants.form.submit"
+            >
+              Send request
+            </button>
+
+            <p class="muted tiny" data-i18n="accountants.form.note">
+              This will open your email app with a pre-filled request.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <div
       class="modalBackdrop"

@@ -134,6 +134,7 @@ const translations = {
     "nav.privacy": "Privacy",
     "nav.faq": "FAQ",
     "nav.download": "Download",
+    "nav.accountants": "Accountants",
     "hero.eyebrow": "Local-first personal finance desktop app",
     "hero.title":
       "Track bills, accounts, and transactions — privately, on your desktop.",
@@ -280,6 +281,31 @@ const translations = {
     "pricing.unit.yr": "/yr",
     "pricing.lifetime.unit": "one-time",
     "pricing.note": "Prices are placeholders. Change them any time.",
+    "accountants.title": "Rent an accountant",
+    "accountants.subtitle": "Choose what you need done, and request an introduction.",
+    "accountants.badge.remote": "Remote",
+    "accountants.card1.title": "Bookkeeping & VAT",
+    "accountants.card1.li1": "Categorization review and clean-up",
+    "accountants.card1.li2": "VAT-ready exports and supporting notes",
+    "accountants.card1.li3": "Attachments organized (invoices/statements)",
+    "accountants.card2.title": "Self‑employed & tax year",
+    "accountants.card2.li1": "Month-by-month summary for your tax year",
+    "accountants.card2.li2": "Expense breakdown and anomaly checks",
+    "accountants.card2.li3": "Export pack for filing or your adviser",
+    "accountants.card3.title": "Small business support",
+    "accountants.card3.li1": "Ongoing bookkeeping and reconciliation",
+    "accountants.card3.li2": "Document handling and invoice organization",
+    "accountants.card3.li3": "Regular reporting and export support",
+    "accountants.request": "Request an introduction",
+    "accountants.note":
+      "This is a request form. Availability depends on region and capacity.",
+    "accountants.modalTitle": "Request an accountant",
+    "accountants.form.region": "Region",
+    "accountants.form.type": "Business type",
+    "accountants.form.email": "Your email",
+    "accountants.form.notes": "What do you need help with?",
+    "accountants.form.submit": "Send request",
+    "accountants.form.note": "This will open your email app with a pre-filled request.",
     "roadmap.title": "Availability & roadmap",
     "roadmap.subtitle": "Desktop first. Mobile is planned.",
     "roadmap.desktop.title": "Desktop",
@@ -1603,6 +1629,7 @@ const translations = {
     "nav.features": "Funksjoner",
     "nav.ai": "AI-assistent",
     "nav.pricing": "Priser",
+    "nav.accountants": "Regnskapsfører",
     "nav.roadmap": "Veikart",
     "nav.privacy": "Personvern",
     "nav.faq": "FAQ",
@@ -1752,6 +1779,30 @@ const translations = {
     "pricing.unit.yr": "/år",
     "pricing.lifetime.unit": "engangskjøp",
     "pricing.note": "Prisene er plassholdere. Endre dem når som helst.",
+    "accountants.title": "Lei en regnskapsfører",
+    "accountants.subtitle": "Velg hva du trenger hjelp med, og be om en introduksjon.",
+    "accountants.badge.remote": "Remote",
+    "accountants.card1.title": "Bokføring og MVA",
+    "accountants.card1.li1": "Kategorisering: gjennomgang og opprydding",
+    "accountants.card1.li2": "Eksport klar for MVA med forklarende notater",
+    "accountants.card1.li3": "Vedlegg organisert (faktura/utskrifter)",
+    "accountants.card2.title": "Selvstendig næringsdrivende og skatteår",
+    "accountants.card2.li1": "Måned-for-måned oppsummering for skatteåret",
+    "accountants.card2.li2": "Utgiftsfordeling og avvikssjekk",
+    "accountants.card2.li3": "Eksportpakke for innsending eller rådgiver",
+    "accountants.card3.title": "Småbedrift støtte",
+    "accountants.card3.li1": "Løpende bokføring og avstemming",
+    "accountants.card3.li2": "Dokumenthåndtering og fakturaorganisering",
+    "accountants.card3.li3": "Regelmessig rapportering og eksportstøtte",
+    "accountants.request": "Be om introduksjon",
+    "accountants.note": "Dette er et forespørselsskjema. Tilgjengelighet avhenger av region og kapasitet.",
+    "accountants.modalTitle": "Be om regnskapsfører",
+    "accountants.form.region": "Region",
+    "accountants.form.type": "Type",
+    "accountants.form.email": "Din e-post",
+    "accountants.form.notes": "Hva trenger du hjelp med?",
+    "accountants.form.submit": "Send forespørsel",
+    "accountants.form.note": "Dette åpner e-postappen din med en ferdig utfylt forespørsel.",
     "roadmap.title": "Tilgjengelighet og veikart",
     "roadmap.subtitle": "Skrivebord først. Mobil er planlagt.",
     "roadmap.desktop.title": "Skrivebord",
@@ -1957,9 +2008,52 @@ function setupLanguage() {
   apply(initial);
 }
 
+function setupAccountants() {
+  const form = document.querySelector("[data-accountant-form]");
+  const modal = document.querySelector('[data-modal="accountant"]');
+  const service = document.querySelector("[data-accountant-service]");
+  if (!(form instanceof HTMLFormElement)) return;
+
+  document.querySelectorAll("[data-accountant-pick]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const picked = btn.getAttribute("data-accountant-pick") || "";
+      if (service instanceof HTMLInputElement) service.value = picked;
+    });
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const to = "support@kivana.app";
+    const picked = String(fd.get("service") || "");
+    const region = String(fd.get("region") || "");
+    const type = String(fd.get("type") || "");
+    const email = String(fd.get("email") || "");
+    const notes = String(fd.get("notes") || "");
+    const subject = `Kivana accountant request — ${picked || "General"}`;
+    const body = [
+      `Service: ${picked || "General"}`,
+      `Region: ${region}`,
+      `Business type: ${type}`,
+      `Email: ${email}`,
+      "",
+      notes,
+    ].join("\n");
+    const href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+    if (modal instanceof HTMLElement) {
+      modal.hidden = true;
+      document.body.style.overflow = "";
+    }
+    window.location.href = href;
+  });
+}
+
 setupMobileNav();
 setupDisabledLinks();
 setYear();
 setupBillingToggle();
 setupLanguage();
 setupModals();
+setupAccountants();
